@@ -102,7 +102,7 @@ export async function action({ request, params }) {
     url = "http://localhost:8080/events/" + eventId;
   }
 
-  const token = getAuthToken();
+  const token = getAuthToken().token;
   const response = await fetch(url, {
     method: method,
     headers: {

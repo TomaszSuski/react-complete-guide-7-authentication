@@ -79,7 +79,7 @@ export async function loader({ request, params }) {
 
 export async function action({ params, request }) {
   const eventId = params.eventId;
-  const token = getAuthToken();
+  const token = getAuthToken().token;
 
   const response = await fetch('http://localhost:8080/events/' + eventId, {
     method: request.method,

@@ -4,7 +4,7 @@ import classes from "./MainNavigation.module.css";
 import NewsletterSignup from "./NewsletterSignup";
 
 function MainNavigation() {
-  const token = useRouteLoaderData("root");
+  const token = useRouteLoaderData("root").token;
   return (
     <header className={classes.header}>
       <nav>
